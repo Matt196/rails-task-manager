@@ -2,8 +2,9 @@
 <ul>
   <% @tasks.each do |task| %>
     <li>
-      <%= link_to task.title, task_path(task) %>
-      <%= link_to 'edit', edit_task_path(task) %>
+      <%= link_to task.title, task_path(task) %> -
+      <%= task.content %> -
+      <%= link_to 'edit', edit_task_path(task) %> -
       <%= link_to 'delete', '#' %>
     </li>
   <% end %>
