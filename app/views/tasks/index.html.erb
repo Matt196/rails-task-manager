@@ -1,0 +1,10 @@
+<h1>These are your tasks</h1>
+<ul>
+  <% @tasks.each do |task| %>
+    <li>
+      <%= task.title%>
+      <%= link_to 'edit', task_path(task) %>
+      <%= link_to 'delete', '#' %>
+    </li>
+  <% end %>
+</ul>
